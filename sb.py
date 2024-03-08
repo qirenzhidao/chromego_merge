@@ -1,7 +1,7 @@
 import requests
 import os
 
-url = "https://sing-box-subscribe.vercel.app/config/https:/mareep.netlify.app/sub/merged_proxies_new.yaml"
+url = "https://sing-box-subscribe.vercel.app/config/https:/mareep.netlify.app/sub/shadowrocket_base64.txt"
 output_folder = "sub"
 output_filename = "sb.json"
 
@@ -18,7 +18,7 @@ if response.status_code == 200:
     # 构建输出文件路径
     output_path = os.path.join(output_folder, output_filename)
 
-    # 将响应内容写入文件
+    # 将响应内容写入文件，使用utf-8编码
     with open(output_path, 'w', encoding='utf-8') as file:
         file.write(response.text)
 
